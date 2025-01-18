@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const voyageurController = require('../controllers/voyageur_controller');
+
+router.post('/', voyageurController.createVoyageur);
+router.get('/', voyageurController.getAllVoyageurs);
+router.get('/:id', voyageurController.getVoyageurById);
+router.put('/:id', voyageurController.updateVoyageur);
+router.delete('/:id', voyageurController.deleteVoyageur);
+
+module.exports = router;
